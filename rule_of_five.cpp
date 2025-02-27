@@ -145,7 +145,8 @@ public:
     // Move operator
     AirTicket& operator=(AirTicket&& src) noexcept {
         if(this != &src) {
-            m_ticket = std::move(src.m_ticket);
+            delete m_ticket;
+            m_ticket = src.m_ticket;
             src.m_ticket = nullptr;
             std::cout << "Moving Air Ticket using operator from: " << &src << " to: " << this << std::endl;
         } else {
