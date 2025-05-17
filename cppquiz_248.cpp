@@ -25,11 +25,11 @@ The program is guaranteed to output: 1111
 Explanation
 std::min() and std::max() return references to their smallest/largest arguments, respectively. But what if they're equal?
 
-The C++ standard says both for std::min() in §[alg.min.max]¶2 and for std::max() in §[alg.min.max]¶10:
+The C++ standard says both for std::min() and for std::max():
 
 Returns the first argument when the arguments are equivalent.
 
-So both the evaluation of std::max(x,y) and std::min(x,y) return x, and both references max and min are bound to x.
+So both the evaluation of std::max(x, y) and std::min(x, y) return x, and both references max and min are bound to x.
 
 We then set x to 11, and print max and min, which are now both 11.
 
