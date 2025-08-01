@@ -8,5 +8,6 @@ file(GLOB source_files "*.cpp")
 
 foreach(file ${source_files})
     get_filename_component(name ${file} NAME_WE)
-    add_executable(${name} ${file})
+    add_executable(${name} ${file}
+            customAllocArena.cpp)
 endforeach()
