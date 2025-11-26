@@ -27,7 +27,7 @@ public:
         other.counter = nullptr;
     }
     // move assignment
-    shared_ptr&& operator=(shared_ptr&& other) {
+    shared_ptr& operator=(shared_ptr&& other) {
         if(this != &other) {
             data = other.data;
             counter = other.counter;
